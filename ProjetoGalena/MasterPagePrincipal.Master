@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPagePrincipal.master.cs" Inherits="ProjetoGalena.MasterPagePrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header><h1 align="center">
+            <asp:Image ID="Image1" runat="server" Height="121px" ImageUrl="~/Imagem/logo.png" Width="445px" />
+            </h1></header>
+        <nav>
+            <asp:Menu ID="Menu1" runat="server" Font-Names="Verdana" Font-Size="X-Large" Orientation="Horizontal" StaticSubMenuIndent="16px">
+                <Items>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Paginas/Index.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Alunos" Value="Alunos" NavigateUrl="~/Paginas/Alunos.aspx"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </nav>
+        <main>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        <footer>
+            <p>2022   -   Desenvolvido por <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://br.linkedin.com/in/bianca-sherika-cavalcante-claro">Bianca Sherika Cavalcante Claro</asp:HyperLink></p>
+        </footer>
+    </form>
+</body>
+</html>
